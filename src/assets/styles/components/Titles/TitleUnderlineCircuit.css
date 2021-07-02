@@ -1,0 +1,80 @@
+.carrousel-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 448px;
+}
+
+.carrousel-title > h2 {
+    margin-bottom: 16px;
+    padding: 0 8px;
+    color: var(--white);
+    font-size: 1.8rem;
+    line-height: 2rem;
+    font-family: var(--Montserrat-Black-font);
+    text-align: center;
+}
+
+.underline-circuit {
+    display: grid;
+    grid-template-columns: 8px 1fr 8px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.underline-circle {
+    width: 8px;
+    height: 8px;
+    background-color: var(--complementary-1-color);
+    border-radius: 4px;
+}
+
+.underline-circle-left {
+    animation: circle-left 1s;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.underline-line {
+    height: 2px;
+    width: 0;
+    background-color: var(--complementary-1-color);
+    animation: line 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+.underline-circle-right {
+    animation: circle-right 1s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes line {
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes circle-left {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes circle-right {
+    to {
+        opacity: 1;
+    }
+}
+
+@media (min-width: 800px) {
+    .carrousel-title > h2 {
+        font-size: 2.4rem;
+        line-height: 2.8rem;
+    }
+}

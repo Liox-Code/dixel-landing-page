@@ -1,0 +1,10 @@
+.contact {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    row-gap: 40px;
+    justify-items: center;
+    padding: 52px 0;
+    width: 100%;
+    max-width: 1400px;
+    z-index: 1;
+}

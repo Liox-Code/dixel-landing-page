@@ -1,0 +1,79 @@
+.nav-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 0;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.link {
+    position: relative;
+}
+
+.link > span {
+    color: var(--white);
+    font-family: var(--Montserrat-Regular-font);
+    font-size: 1.8rem;
+}
+
+.link-underline {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    height: 8px;
+    opacity: 0;
+}
+
+.link-underline > div {
+    position: absolute;
+    background-color: var(--complementary-1-color);
+}
+
+.nav-link--circle {
+    align-self: flex-start;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+}
+
+.nav-link--line {
+    width: 0%;
+    height: 4px;
+    border-radius: 4px;
+}
+
+.nav-link:hover > .link > span{
+    color: var(--complementary-1-color);
+    transition: all 1s;
+}
+
+.nav-link:hover > .link > .link-underline{
+    opacity: 1;
+}
+
+.nav-link:hover > .link > .link-underline > .nav-link--line{
+    width: 100%;
+    transition: all 1s;
+}
+
+.nav-link:hover > .link > .link-underline > .nav-link--circle{
+    animation: circle 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes circle {
+    from {
+        left: 0;
+    }
+    to {
+        left: calc(50% - 4px);
+    }
+}
+
+@media (min-width: 800px) {
+    .nav-link {
+        padding: 8px 0 4px;
+    }
+}

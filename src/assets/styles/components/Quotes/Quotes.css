@@ -1,0 +1,47 @@
+.quotes-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+    width: 100%;
+    background-color: var(--complementary-7-color);
+    z-index: 1;
+}
+
+.quotes {
+    display: grid;
+    max-width: 1400px;
+}
+
+.quotes > p, .quotes > span {
+    color: var(--white);
+    width: 75vw;
+    max-width: 600px;
+}
+
+.quotes > p {
+    margin-bottom: 40px;
+    font-family: var(--Montserrat-BlackItalic-font);
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    text-align: center;
+}
+
+.quotes > span {
+    font-family: var(--Montserrat-LightItalic-font);
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    text-align: end;
+}
+
+@media (min-width: 800px) {
+    .quotes > p {
+        font-size: 2rem;
+        line-height: 2.6rem;
+    }
+
+    .quotes > span {
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+    }
+}

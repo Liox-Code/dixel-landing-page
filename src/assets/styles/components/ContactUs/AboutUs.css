@@ -1,0 +1,26 @@
+.about-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+.about-us > img {
+    margin-bottom: 32px;
+    width: 200px;
+}
+
+.about-us > p {
+    color: var(--white);
+    font-family: var(--Montserrat-Light-font);
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+@media (min-width: 800px) {
+    .about-us > p {
+        font-size: 1.4rem;
+        line-height: 1.6rem;
+    }
+}

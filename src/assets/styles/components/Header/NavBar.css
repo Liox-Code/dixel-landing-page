@@ -1,0 +1,13 @@
+.navbar {
+    padding: 16px 0;
+}
+
+@media (min-width: 800px) {
+    .navbar {
+        display: flex;
+        justify-content: space-around;
+        padding: 0;
+        background-color: var(--complementary-6-color);
+        border-radius: 8px;
+    }
+}

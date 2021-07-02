@@ -1,0 +1,55 @@
+.service {
+    display: grid;
+    justify-items: center;
+    row-gap: 12px;
+    margin-bottom: 48px;
+    width: 260px;
+}
+
+.service > img {
+    width: 130px;
+}
+
+.service > a {
+    margin-bottom: 12px;
+}
+
+.service > p {
+    color: var(--white);
+    font-family: var(--Montserrat-Light-font);
+    font-size: 1.2rem;
+    line-height:1.6rem;
+    text-align: justify;
+}
+
+@media (min-width: 800px) {
+    .service {
+        grid-template-columns: minmax(360px, 400px) 160px;
+        grid-template-areas: 
+        'button image'
+        'description  image';
+        justify-items: start;
+        column-gap: 24px;
+        width: auto;
+        max-width: 740px;
+    }
+
+    .service > img {
+        grid-area: image;
+        align-self: center;
+        justify-self: center;
+        width: 160px;
+    }
+
+    .service > a {
+        grid-area: button;
+        align-self: end;
+    }
+    
+    .service > p {
+        grid-area: description;
+        align-self: start;
+        font-size: 1.4rem;
+        line-height:1.6rem;
+    }
+}

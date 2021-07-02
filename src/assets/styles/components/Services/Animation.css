@@ -1,0 +1,177 @@
+.circuit-animation--container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.circuit-animation {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 40px 174px 310px 404px;
+    align-content: start;
+    position: relative;
+    height: 100%;
+}
+
+.circuit-animation > div{
+    /* position: absolute; */
+    grid-column: 1 / 2;
+    background-color: var(--complementary-1-color);
+}
+
+.circuit-animation--vertical {
+    width: 2px;
+}
+
+.circuit-animation--horizontal {
+    height: 2px;
+}
+
+.circuit-animation--circle {
+    justify-self: center;
+    align-self: center;
+    position: absolute;
+    top: -4px;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+}
+
+.circuit-animation--vertical-1 {
+    grid-row: 1 / 2;
+    justify-self: end;
+    height: 0;
+    animation: vertical-1 0.4s;
+    animation-delay: 1.4s;
+    animation-fill-mode: forwards;
+}
+
+.circuit-animation--horizontal-1 {
+    grid-row: 2 / 3;
+    align-self: start;
+    justify-self: end;
+    width: 0;
+    animation: horizontal-1 1s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+.circuit-animation--vertical-2 {
+    grid-row: 2 / 5;
+    position: absolute;
+    height: 0;
+    animation: vertical-2 2s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+
+.circuit-animation--horizontal-2 {
+    grid-row: 3 / 4;
+    align-self: start;
+    width: 0;
+    animation: horizontal-2 2s;
+    animation-delay: 3.2s;
+    animation-fill-mode: forwards;
+}
+
+.circuit-animation--circle-1 {
+    grid-row: 3 / 4;
+}
+
+.circuit-animation--horizontal-3 {
+    grid-row: 4 / 5;
+    align-self: start;
+    width: 0;
+    animation: horizontal-3 2s;
+    animation-delay: 3.6s;
+    animation-fill-mode: forwards;
+}
+
+.circuit-animation--circle-2 {
+    grid-row: 4 / 5;
+}
+
+.circuit-animation--horizontal-4 {
+    grid-row: 5 / 6;
+    align-self: start;
+    width: 0;
+    animation: horizontal-4 2s;
+    animation-delay: 4.8s;
+    animation-fill-mode: forwards;
+}
+
+.circuit-animation--circle-3 {
+    grid-row: 5 / 6;
+}
+
+@keyframes vertical-1 {
+    to {
+        height: 100%;
+    }
+}
+
+@keyframes horizontal-1 {
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes vertical-2 {
+    to {
+        height: 100%;
+    }
+}
+
+@keyframes horizontal-2 {
+    to {
+        width: 50%;
+    }
+}
+
+@keyframes horizontal-3 {
+    to {
+        width: 50%;
+    }
+}
+
+@keyframes horizontal-4 {
+    to {
+        width: 50%;
+    }
+}
+
+@media (min-width: 800px) {
+    .circuit-animation {
+        grid-template-rows: 80px 124px 196px 216px;
+    }
+
+    .circuit-animation--circle-1 {
+        left: 80px;
+    }
+
+    .circuit-animation--circle-2 {
+        left: 140px;
+    }
+
+    .circuit-animation--circle-3 {
+        left: 200px;
+    }
+
+    @keyframes horizontal-2 {
+        to {
+            width: 80px;
+        }
+    }
+    
+    @keyframes horizontal-3 {
+        to {
+            width: 140px;
+        }
+    }
+    
+    @keyframes horizontal-4 {
+        to {
+            width: 200px;
+        }
+    }
+}

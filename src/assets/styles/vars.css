@@ -1,0 +1,66 @@
+:root {
+    /* color */
+    --primary-color: #F72585;
+    --secundary-color: #7209B7;
+    --complementary-1-color: #00F5D4;
+    --complementary-2-color: #4CC9F0;
+    --complementary-3-color: #4895EF;
+    --complementary-4-color: #4361EE;
+    --complementary-5-color: #3F37C9;
+    --complementary-6-color: #3A0CA3;
+    --complementary-7-color: #480CA8;
+    --complementary-8-color: #560BAD;
+    --complementary-9-color: #B5179E;
+    --complementary-10-color: #6930C3;
+    --white: #F1FAEE;
+    --black: #161616;
+    /* font */
+    --Gillubcd-font: 'Gillubcd';
+    --Montserrat-Black-font: 'Montserrat-Black';
+    --Montserrat-BlackItalic-font: 'Montserrat-BlackItalic';
+    --Montserrat-Bold-font: 'Montserrat-Bold';
+    --Montserrat-Light-font: 'Montserrat-Light';
+    --Montserrat-LightItalic-font: 'Montserrat-LightItalic';
+    --Montserrat-Medium-font: 'Montserrat-Medium';
+    --Montserrat-Regular-font: 'Montserrat-Regular';
+}
+
+@font-face {
+    font-family: 'Gillubcd';
+    src: url('../../assets/fonts/Gillubcd.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat-Black';
+    src: url('../../assets/fonts/Montserrat-Black.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat-BlackItalic';
+    src: url('../../assets/fonts/Montserrat-BlackItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat-Bold';
+    src: url('../../assets/fonts/Montserrat-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat-Light';
+    src: url('../../assets/fonts/Montserrat-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat-LightItalic';
+    src: url('../../assets/fonts/Montserrat-LightItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat-Medium';
+    src: url('../../assets/fonts/Montserrat-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat-Regular';
+    src: url('../../assets/fonts/Montserrat-Regular.ttf') format('truetype');
+}

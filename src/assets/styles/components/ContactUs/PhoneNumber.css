@@ -1,0 +1,13 @@
+.phone-number {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    column-gap: 8px;
+}
+
+.phone-number > span{
+    color: var(--white);
+    font-family: var(--Montserrat-Light-font);
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+}
