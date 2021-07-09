@@ -20,7 +20,7 @@ const Portrait = () => {
                     <h1>VISUALIZA TUS PROYECTOS 3D CUANDO QUIERAS, DONDE QUIERAS</h1>
                     <p>Tus proyectos en Realidad Aumentada desde cualquier dispositivo.</p>
                     <a
-                        href=""
+                        href="#top"
                         className="portrait--button small-red-button"
                     >
                         ¡LO QUIERO!

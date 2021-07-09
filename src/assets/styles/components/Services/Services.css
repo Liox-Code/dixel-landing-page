@@ -13,6 +13,7 @@
     grid-column: 1 / 2;
     grid-row: 2 / 3;
     justify-self: start;
+    position: absolute;
     width: 50%;
 }
 

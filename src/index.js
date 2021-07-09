@@ -4,4 +4,6 @@ import Home from './pages/Home';
 
 import '../src/assets/styles/global.css';
 
-ReactDOM.render(<Home/>, document.getElementById('app'));
+ReactDOM.render(
+    <Home/>
+    , document.getElementById('app'));

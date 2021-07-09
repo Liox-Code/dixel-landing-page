@@ -6,13 +6,14 @@ import Portrait from '../components/Header/Portrait';
 import Quotes from '../components/Quotes/Quotes';
 import Services from '../components/Services/Services';
 import Carrousel from '../components/Carrousel/Carrousel';
+import PricePacks from '../components/PricePacks/PricePacks';
 import ApplicationAreas from '../components/ApplicationAreas/ApplicationAreas';
 import ContactUs from '../components/ContactUs/ContactUs';
 import Contact from '../components/ContactUs/Contact';
 import Footer from '../components/Footer/Footer';
 
 //images
-import portraitBackground from '../assets/static/background-figures-vertical.svg';
+// import portraitBackground from '../assets/static/background-figures-vertical.svg';
 
 //styles
 import '../assets/styles/pages/Home.css';
@@ -57,6 +58,9 @@ const Home = () => {
                 </div>
                 <div className="carrousel--background background">
                     <Carrousel/>
+                </div>
+                <div className="price-packs--background background">
+                    <PricePacks/>
                 </div>
                 <div className="application-areas--background background">
                     <ApplicationAreas/>

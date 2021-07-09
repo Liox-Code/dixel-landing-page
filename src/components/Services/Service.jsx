@@ -9,18 +9,22 @@ import '../../assets/styles/icons/Arrow-Icon.css';
 import { RiArrowRightSLine } from "react-icons/ri";
 
 const Service = (props) => {
-    const {title, description, image} = props.service;
-    console.log(props);
+    const {title, description, image, id} = props.service;
+
+    function handleClick(serviceId) {
+        props.onClick(serviceId);
+    }
+
     return(
         <React.Fragment>
             <div className="service">
                 <img src={image} alt=""/>
-                <a
+                <button
+                    onClick={() => handleClick(id)}
                     className="small-red-button"
-                    href="#"
                 >
                     {title} <RiArrowRightSLine className="arrow-icon"/>
-                </a>
+                </button>
                 <p>
                     {description}
                 </p>

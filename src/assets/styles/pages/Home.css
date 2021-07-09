@@ -43,16 +43,20 @@
     background: linear-gradient(to bottom, var(--complementary-8-color), var(--secundary-color));
 }
 
-.application-areas--background {
+.price-packs--background {
     background: linear-gradient(to bottom, var(--secundary-color), var(--complementary-9-color));
 }
 
-.contact-us--background {
+.application-areas--background {
     background: linear-gradient(to bottom, var(--complementary-9-color), var(--primary-color));
 }
 
-.contact-info--background {
+.contact-us--background {
     background-color: var(--primary-color);
+}
+
+.contact-info--background {
+    background-color: var(--black);
 }
 
 .footer-info--background {

@@ -1,0 +1,35 @@
+.service-description-section {
+    margin-bottom: 40px;
+}
+
+.service-description-section > h3 {
+    margin-bottom: 12px;
+    color: var(--white);
+    font-weight: normal;
+    font-family: var(--Montserrat-Medium-font);
+    font-size: 1.4rem;
+}
+
+.service-description-section > p {
+    margin-bottom: 16px;
+    color: var(--white);
+    font-family: var(--Montserrat-Light-font);
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+@media (min-width: 800px) {
+    .service-description-section {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        column-gap: 20px;
+        margin-bottom: 0;
+    }
+
+    .service-description-section > h3 {
+    }
+    
+    .service-description-section > p {
+        grid-column: 2 / 3;
+    }
+}

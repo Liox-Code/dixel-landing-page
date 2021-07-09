@@ -3,9 +3,10 @@
     grid-auto-flow: column;
     justify-items: center;
     align-items: center;
-    padding: 12px 20px;
+    padding: 12px 12px;
     max-width: 280px;
     background-color: var(--primary-color);
+    border: none;
     border-radius: 100px;
     box-shadow: 5px -5px var(--secundary-color);
     color: var(--white);

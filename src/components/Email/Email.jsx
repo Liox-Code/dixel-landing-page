@@ -5,7 +5,7 @@ import '../../assets/styles/components/Email/Email.css';
 import '../../assets/styles/components/Buttons/Small-Purple-Button.css';
 
 //icons
-import { AiFillCheckCircle, AiFillCloseCircle } from "react-icons/ai";
+// import { AiFillCheckCircle, AiFillCloseCircle } from "react-icons/ai";
 
 const Email = () => {
     return(

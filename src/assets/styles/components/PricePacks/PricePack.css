@@ -1,0 +1,65 @@
+.price-pack--container {
+    display: grid;
+    width: 320px;
+    background-color: var(--complementary-8-color);
+    border-radius: 12px;
+    box-shadow: 10px 10px var(--complementary-1-color);
+    margin-bottom: 60px;
+}
+
+.price-pack--header {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    border-bottom: 2px solid var(--complementary-1-color);
+}
+
+.price-pack--header > h3 {
+    color: var(--complementary-1-color);
+    font-family: var(--Montserrat-Black-font);
+    font-size: 2rem;
+}
+
+.price-pack--content {
+    padding: 24px 24px 40px;
+}
+
+.price-pack--content > p {
+    margin-bottom: 32px;
+    color: var(--white);
+    font-family: var(--Montserrat-Light-font);
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+.price-pack--list {
+    display: grid;
+    row-gap: 16px;
+    list-style: none;
+}
+
+.price-pack--list > li {
+    display: flex;
+    color: var(--white);
+    font-family: var(--Montserrat-Light-font);
+    font-size: 1.2rem;
+}
+
+.price-pack--dot {
+    margin-right: 12px;
+    min-width: 16px;
+    min-height: 16px;
+    color: var(--complementary-1-color);
+}
+
+.price-pack--price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    background-color: var(--primary-color);
+    border-radius: 12px;
+    color: var(--white);
+    font-family: var(--Montserrat-Bold-font);
+    font-size: 2rem;
+}

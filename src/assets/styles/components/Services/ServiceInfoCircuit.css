@@ -1,0 +1,140 @@
+.service-info-circuit {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.service-info-circuit--left {
+    grid-column: 1 / 2;
+}
+
+.service-info-circuit--right {
+    grid-column: 2 / 3;
+}
+
+.service-info-circuit--line {
+    position: absolute;
+    background-color: var(--complementary-1-color);
+}
+
+.service-info-circuit--horizontal {
+    height: 2px;
+}
+
+.service-info-circuit--vertical-1 {
+    top: 50px;
+    width: 2px;
+    animation: vertical 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 2.6s;
+}
+
+.service-info-circuit--vertical-2 {
+    width: 2px;
+    animation: vertical 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 1.4s;
+}
+
+@keyframes vertical {
+    from {
+        height: 0;
+    }
+    to {
+        height: 100%;
+    }
+}
+
+.service-info-circuit--horizontal-1 {
+    justify-self: end;
+    top: 50px;
+    height: 2px;
+    animation: horizontal 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 1.6s;
+}
+
+.service-info-circuit--horizontal-2 {
+    height: 2px;
+    max-width: 20px;
+    animation: horizontal 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 2.8s;
+}
+
+.service-info-circuit--horizontal-3 {
+    height: 2px;
+    max-width: 60px;
+    animation: horizontal 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 3s;
+}
+
+@keyframes horizontal {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.service-info-circuit--horizontal:nth-child(2n + 0) {
+    animation: horizontal-impar 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+}
+
+.service-info-circuit--horizontal:nth-child(2n + 1) {
+    animation: horizontal-par 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+}
+
+@keyframes horizontal-impar {
+    from {
+        width: 0;
+    }
+    to {
+        width: 36px;
+    }
+}
+
+@keyframes horizontal-par {
+    from {
+        width: 0;
+    }
+    to {
+        width: 72px;
+    }
+}
+
+.service-info-circuit--circle-1 {
+    left: 20px;
+    height: 8px;
+    width: 8px;
+    border-radius: 100%;
+    animation: circle 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 2.6s;
+    opacity: 0;
+}
+
+.service-info-circuit--circle-2 {
+    left: 60px;
+    height: 8px;
+    width: 8px;
+    border-radius: 100%;
+    animation: circle 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 2.8s;
+    opacity: 0;
+}
+
+@keyframes circle {
+    to {
+        opacity: 1;
+    }
+}

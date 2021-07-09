@@ -7,7 +7,7 @@ const NavLink = (props) => {
     const {text} = props;
     return(
         <React.Fragment>
-            <a className="nav-link">
+            <a href="#top" className="nav-link">
                 <div className="link">
                     <span>{text}</span>
                     <div className="link-underline">
