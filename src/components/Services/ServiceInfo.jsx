@@ -55,7 +55,7 @@ const ServiceInfo = (props) => {
     }
     , [animationControl])
 
-    useEffect( async () => {
+    useEffect( () => {
         const { innerWidth } = window;
 
         const descriptionContainer = [...refDescriptionContainer.current.children];

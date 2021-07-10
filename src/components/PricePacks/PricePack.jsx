@@ -1,35 +1,61 @@
-import React from 'react';
+import React, {useState} from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 //styles\
 import '../../assets/styles/components/PricePacks/PricePack.css';
 
 //icons
-import { GoPrimitiveDot } from "react-icons/go";
+import { GoChevronUp, GoChevronDown, GoPrimitiveDot } from "react-icons/go";
 
-const PricePack = () => {
+//animation
+import { transitionOpen } from '../../animations/PricePack';
+
+const PricePack = (props) => {
+    const { title, description, packBenefits, price, style} = props.packData;
+    const { isOpen } = props
+    const [ open, setOpen] = useState(isOpen);
+
+    const HandleToggleOpen = () => {
+        setOpen(!open);
+        console.log(open);
+    }
+
     return(
         <React.Fragment>
-            <div className="price-pack--container">
-                <div className="price-pack--header">
-                    <h3>Dixel Web AR Básico</h3>
-                    <span></span>
-                </div>
-                <div className="price-pack--content">
-                    <p>Los modelos 3D son cotizados según la cantidad y complejidad que se requiera incluir.</p>
-                    <ul className="price-pack--list">
-                        <li><GoPrimitiveDot className="price-pack--dot"/> Diseño Web a medida Web</li>
-                        <li><GoPrimitiveDot className="price-pack--dot"/> Diseño Responsive</li>
-                        <li><GoPrimitiveDot className="price-pack--dot"/> Formulario de contacto</li>
-                        <li><GoPrimitiveDot className="price-pack--dot"/> Mapa de ubicación</li>
-                        <li><GoPrimitiveDot className="price-pack--dot"/> Sección servicios</li>
-                        <li><GoPrimitiveDot className="price-pack--dot"/> Sección AR</li>
-                        <li><GoPrimitiveDot className="price-pack--dot"/> Aplicación Web</li>
-                    </ul>
-                </div>
-                <div className="price-pack--price">
-                    580 Bs.
-                </div>
-            </div>
+                <motion.div className={`price-pack--container ${style}`} layout>
+                    <div className="price-pack--header">
+                        {title}
+                        {open ?
+                            <GoChevronUp className="price-pack--arrow" onClick={HandleToggleOpen}/>
+                            :
+                            <GoChevronDown className="price-pack--arrow" onClick={HandleToggleOpen}/>
+                        }
+                    </div>
+                    <AnimatePresence>
+                        { open &&
+                            <motion.div
+                                className="price-pack--content"
+                                layout
+                                initial="initial"
+                                animate="animate"
+                                exit="exit"
+                                variants={transitionOpen}
+                            >
+                                <p>{description}</p>
+                                <ul className="price-pack--list">
+                                    {
+                                        packBenefits.map( (packItem, index) => (
+                                            <li key={index}><GoPrimitiveDot className="price-pack--dot"/>{packItem}</li>
+                                        ))
+                                    }
+                                </ul>
+                            </motion.div>
+                        }
+                    </AnimatePresence>
+                    <div className="price-pack--price">
+                        {price}
+                    </div>
+                </motion.div>
         </React.Fragment>
     )
 }

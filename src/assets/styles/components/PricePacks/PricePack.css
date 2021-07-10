@@ -1,23 +1,60 @@
 .price-pack--container {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     width: 320px;
-    background-color: var(--complementary-8-color);
     border-radius: 12px;
+    margin: 0 20px 60px;
+}
+
+.basic-pack {
+    background-color: var(--complementary-8-color);
     box-shadow: 10px 10px var(--complementary-1-color);
-    margin-bottom: 60px;
+}
+
+.normal-pack {
+    background-color: var(--complementary-5-color);
+    box-shadow: 10px 10px var(--primary-color);
+}
+
+.plus-pack {
+    background-color: var(--complementary-6-color);
+    box-shadow: 10px 10px var(--primary-color);
 }
 
 .price-pack--header {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     margin-top: 20px;
     border-bottom: 2px solid var(--complementary-1-color);
 }
 
 .price-pack--header > h3 {
-    color: var(--complementary-1-color);
     font-family: var(--Montserrat-Black-font);
     font-size: 2rem;
+}
+
+.price-pack--header > h3 > span{
+    color: var(--complementary-1-color);
+}
+
+.price-pack--arrow {
+    color: var(--complementary-1-color);
+    font-size: 2.6rem;
+    margin: 4px 0;
+    cursor: pointer;
+}
+
+.basic-pack > .price-pack--header > h3 {
+    color: var(--complementary-1-color);
+}
+
+.normal-pack > .price-pack--header > h3 {
+    color: var(--white);
+}
+
+.plus-pack > .price-pack--header > h3 {
+    color: var(--white);
 }
 
 .price-pack--content {
@@ -57,9 +94,22 @@
     justify-content: center;
     align-items: center;
     height: 40px;
-    background-color: var(--primary-color);
     border-radius: 12px;
-    color: var(--white);
     font-family: var(--Montserrat-Bold-font);
     font-size: 2rem;
+}
+
+.basic-pack > .price-pack--price {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.normal-pack > .price-pack--price {
+    background-color: var(--complementary-1-color);
+    color: var(--black);
+}
+
+.plus-pack > .price-pack--price {
+    background-color: var(--complementary-1-color);
+    color: var(--black);
 }
