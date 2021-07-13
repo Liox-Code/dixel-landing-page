@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 //components
 import ApplicationArea from './ApplicationArea';
@@ -10,7 +11,7 @@ import '../../assets/styles/components/ApplicationAreas/ApplicationAreas.css';
 const ApplicationAreas = () => {
     return(
         <React.Fragment>
-            <div className="application-areas">
+            <motion.div layout className="application-areas">
                 <TitleUnderlineCircuit
                     title="ÁREAS DONDE SE PUEDE APLICAR REALIDAD AUMENTADA"
                 />
@@ -24,7 +25,7 @@ const ApplicationAreas = () => {
                     <ApplicationArea/>
                     <ApplicationArea/>
                 </div>
-            </div>
+            </motion.div>
         </React.Fragment>
     )
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion, AnimateSharedLayout } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 //components
 import TitleUnderlineCircuit from '../Titles/TitleUnderlineCircuit';
@@ -8,7 +8,7 @@ import PricePack from '../PricePacks/PricePack';
 //styles\
 import '../../assets/styles/components/PricePacks/PricePacks.css';
 
-const PricePacks = () => {
+const PricePacks = (props) => {
     const listPacks = [
         {
             "id": "1",
@@ -138,29 +138,27 @@ const PricePacks = () => {
 
     return(
         <React.Fragment>
-            <AnimateSharedLayout>
-                <motion.div className="price-packs" layout>
-                    <TitleUnderlineCircuit title="NUESTROS PLANES A TU MEDIDA"/>
-                    <div className="price-pack--first-item">
-                        <PricePack packData={listPacks[0]} isOpen={true}/>
-                    </div>
-                    <div className="price-packs--container">
-                        {
-                            listPacks.slice(1).map( (pack, index) => (
-                                <PricePack key={index} packData={pack} isOpen={false}/>
-                            ))
-                        }
-                    </div>
-                    <div className="price-packs--extra-data">
-                        <p>
-                            * En los planes <b>no se incluye el costo</b> de la compra del Dominio y Hosting.
-                        </p>
-                        <p>
-                            * El <b>IVA no esta incluido</b> en los precios.
-                        </p>
-                    </div>
+            <motion.div layout className="price-packs">
+                <TitleUnderlineCircuit title="NUESTROS PLANES A TU MEDIDA"/>
+                <motion.div layout className="price-pack--first-item">
+                    <PricePack packData={listPacks[0]} startOpen={true}/>
                 </motion.div>
-            </AnimateSharedLayout>
+                <motion.div layout className="price-packs--container">
+                    {
+                        listPacks.slice(1).map( (pack, index) => (
+                            <PricePack key={index} packData={pack} startOpen={false}/>
+                        ))
+                    }
+                </motion.div>
+                <motion.div layout className="price-packs--extra-data">
+                    <p>
+                        * En los planes <b>no se incluye el costo</b> de la compra del Dominio y Hosting.
+                    </p>
+                    <p>
+                        * El <b>IVA no esta incluido</b> en los precios.
+                    </p>
+                </motion.div>
+            </motion.div>
         </React.Fragment>
     )
 }

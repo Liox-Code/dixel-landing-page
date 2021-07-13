@@ -11,8 +11,10 @@ const NavLink = (props) => {
                 <div className="link">
                     <span>{text}</span>
                     <div className="link-underline">
-                        <div className="nav-link--line"></div>
-                        <div className="nav-link--circle"></div>
+                        <div className="nav-link--circle nav-link--circle-left"></div>
+                        <div className="nav-link--line nav-link--line-left"></div>
+                        <div className="nav-link--line nav-link--line-right"></div>
+                        <div className="nav-link--circle nav-link--circle-right"></div>
                     </div>
                 </div>
             </a>

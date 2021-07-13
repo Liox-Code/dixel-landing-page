@@ -1,17 +1,21 @@
 .service {
     display: grid;
     justify-items: center;
+    align-items: start;
     row-gap: 12px;
-    margin-bottom: 48px;
+    /* margin-bottom: 48px; */
     width: 260px;
+    height: 360px;
 }
 
 .service > img {
     width: 130px;
+    height: 140px;
 }
 
 .service > a {
     margin-bottom: 12px;
+    height: 64px;
 }
 
 .service > p {
@@ -32,6 +36,7 @@
         column-gap: 24px;
         width: auto;
         max-width: 740px;
+        height: 200px;
     }
 
     .service > img {
@@ -39,6 +44,7 @@
         align-self: center;
         justify-self: center;
         width: 160px;
+        height: 170px;
     }
 
     .service > a {

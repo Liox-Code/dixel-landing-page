@@ -14,7 +14,7 @@ import '../../assets/styles/components/Header/Header.css';
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
 const Header = (props) => {
-    const { width } = props;
+    const { screenWidth } = props;
     const [showMenu, setShowMenu] = useState(false);
     const toggle = () => {
         setShowMenu(!showMenu);
@@ -26,7 +26,7 @@ const Header = (props) => {
                     href="#top"
                     className="logo-header"
                 >
-                    {(width < 800) ?
+                    {(screenWidth < 800) ?
                         <img
                             src={logo}
                             alt="logo Dixel"
@@ -38,7 +38,7 @@ const Header = (props) => {
                         />
                     }
                 </a>
-                {(width < 800) &&
+                {(screenWidth < 800) &&
                     <div className="icon-header--container">
                         {(showMenu) ?
                             <React.Fragment>
@@ -56,7 +56,7 @@ const Header = (props) => {
                     </div>
                 }
                 
-                {(width >= 800 || showMenu) &&
+                {(screenWidth >= 800 || showMenu) &&
                     <div className="header--navbar">
                         <NavBar/>
                     </div>

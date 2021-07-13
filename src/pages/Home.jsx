@@ -1,4 +1,5 @@
 import React, { useState, useEffect} from 'react';
+import { motion, AnimateSharedLayout } from 'framer-motion';
 
 //Components
 import Header from '../components/Header/Header';
@@ -31,7 +32,7 @@ function useWindowsSize() {
 const Home = () => {
     const width = useWindowsSize();
     return(
-        <React.Fragment>
+        <AnimateSharedLayout>
             <div className="home">
                 {/* <img
                     className="portrait--background-image"
@@ -45,7 +46,7 @@ const Home = () => {
             /> */}
                 <div className="background--image"></div>
                 <div className="header--background background">
-                    <Header width={width}/>
+                    <Header screenWidth={width}/>
                 </div>
                 <div className="portrait--background background">
                     <Portrait/>
@@ -59,12 +60,12 @@ const Home = () => {
                 <div className="carrousel--background background">
                     <Carrousel/>
                 </div>
-                <div className="price-packs--background background">
+                <motion.div layout className="price-packs--background background">
                     <PricePacks/>
-                </div>
-                <div className="application-areas--background background">
+                </motion.div>
+                <motion.div layout className="application-areas--background background">
                     <ApplicationAreas/>
-                </div>
+                </motion.div>
                 <div className="contact-us--background background">
                     <ContactUs/>
                 </div>
@@ -75,7 +76,7 @@ const Home = () => {
                     <Footer/>
                 </div>
             </div>
-        </React.Fragment>
+        </AnimateSharedLayout>
     )
 }
 

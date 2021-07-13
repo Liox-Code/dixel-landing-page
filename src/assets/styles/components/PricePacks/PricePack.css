@@ -1,7 +1,7 @@
 .price-pack--container {
     display: flex;
     flex-direction: column;
-    width: 320px;
+    width: 300px;
     border-radius: 12px;
     margin: 0 20px 60px;
 }
@@ -25,7 +25,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
+    padding-top: 20px;
+}
+
+.price-pack--bottom-border {
     border-bottom: 2px solid var(--complementary-1-color);
 }
 
@@ -112,4 +115,18 @@
 .plus-pack > .price-pack--price {
     background-color: var(--complementary-1-color);
     color: var(--black);
+}
+
+@media (min-width: 800px) {
+    .price-pack--container {
+        width: 340px;
+    }
+
+    .price-pack--header {
+        padding: 28px 0;
+    }
+
+    .price-pack--content {
+        padding: 30px 30px 40px;
+    }
 }

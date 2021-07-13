@@ -32,16 +32,32 @@
 }
 
 .nav-link--circle {
-    align-self: flex-start;
+    position: absolute;
     width: 8px;
     height: 8px;
     border-radius: 100%;
+}
+
+.nav-link--circle-left {
+    align-self: flex-start;
+}
+
+.nav-link--circle-right {
+    align-self: flex-end;
 }
 
 .nav-link--line {
     width: 0%;
     height: 4px;
     border-radius: 4px;
+}
+
+.nav-link--line-left {
+    align-self: flex-start;
+}
+
+.nav-link--line-right {
+    align-self: flex-end;
 }
 
 .nav-link:hover > .link > span{
@@ -58,17 +74,33 @@
     transition: all 1s;
 }
 
-.nav-link:hover > .link > .link-underline > .nav-link--circle{
-    animation: circle 1s;
+.nav-link:hover > .link > .link-underline > .nav-link--circle-left{
+    animation: nav-link-circle--left-center 1s;
     animation-fill-mode: forwards;
+    animation-delay: 0.5s;
 }
 
-@keyframes circle {
+.nav-link:hover > .link > .link-underline > .nav-link--circle-right{
+    animation: nav-link-circle--right-center 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes nav-link-circle--left-center {
     from {
         left: 0;
     }
     to {
         left: calc(50% - 4px);
+    }
+}
+
+@keyframes nav-link-circle--right-center {
+    from {
+        right: 0;
+    }
+    to {
+        right: calc(50% - 4px);
     }
 }
 
