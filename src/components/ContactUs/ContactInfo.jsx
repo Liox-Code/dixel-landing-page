@@ -17,8 +17,6 @@ const ContactInfo = () => {
                 <h3>Contacto</h3>
                 <div className="phone-number--container">
                     <PhoneNumber/>
-                    <PhoneNumber/>
-                    <PhoneNumber/>
                 </div>
                 <div className="social-media--container">
                     <div className="circle-icon">

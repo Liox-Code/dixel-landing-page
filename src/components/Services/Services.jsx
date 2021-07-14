@@ -18,10 +18,8 @@ import ar from '../../assets/static/augmented-reality.svg';
 import app from '../../assets/static/app.svg';
 
 const Services = (props) => {
-    const [ servicesInfo, setServicesInfo ] = useState({
-        serviceShown: 0,
-        servicesPosition: [],
-    });
+    const [ servicesPosition, setServicesPosition ] = useState([]);
+    const [ serviceShown, setServiceShown ] = useState(0);
     const refServices = useRef();
     const refServicesContainer = useRef();
 
@@ -102,27 +100,24 @@ const Services = (props) => {
     ]
 
     function handleClick(serviceId) {
-        setServicesInfo({
-            ...servicesInfo,
-            serviceShown: serviceId,
-        });
+        setServiceShown(serviceId);
     }
 
     useEffect( () => {
-        const servicesContainer = [...refServices.current.children];
-        const servicesPositions = servicesContainer.map(service =>(
-            service.children[1].getBoundingClientRect().top + (service.children[1].getBoundingClientRect().height / 2) - refServicesContainer.current.getBoundingClientRect().top
-        ));
-        setServicesInfo({
-            serviceShown: 0,
-            servicesPosition: servicesPositions,
-        });
+        if(serviceShown === 0)
+        {
+            const servicesContainer = [...refServices.current.children];
+            const servicesPositions = servicesContainer.map(service =>(
+                service.children[1].getBoundingClientRect().top + (service.children[1].getBoundingClientRect().height / 2) - refServicesContainer.current.getBoundingClientRect().top
+            ));
+            setServicesPosition(servicesPositions);
+        }
     }
-    , [props])
+    , [props, serviceShown])
 
     return(
         <React.Fragment>
-            {(servicesInfo.serviceShown === 0) &&
+            {(serviceShown === 0) &&
                 <motion.div
                     animate="animate"
                     variants={transitionEffectLeftRight}
@@ -142,17 +137,17 @@ const Services = (props) => {
                         )}
                     </div>
                     <div className="services-container" ref={refServicesContainer}>
-                        {(servicesInfo.servicesPosition.length) &&
-                            <ServicesCircuit posServices={servicesInfo.servicesPosition}/>
+                        {(servicesPosition.length) &&
+                            <ServicesCircuit posServices={servicesPosition}/>
                         }
                     </div>
                 </motion.div>
             }
-            {(servicesInfo.serviceShown) &&
+            {(serviceShown > 0) &&
                 <ServiceInfo
                     service={
                         listServices.filter( (service) => {
-                            return ((service.id === servicesInfo.serviceShown) && service)
+                            return ((service.id === serviceShown) && service)
                         })
                     }
                     onClick={handleClick}

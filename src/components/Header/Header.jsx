@@ -1,4 +1,5 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
+import { motion, AnimatePresence } from "framer-motion";
 
 //components
 import NavBar from './NavBar';
@@ -19,6 +20,11 @@ const Header = (props) => {
     const toggle = () => {
         setShowMenu(!showMenu);
     }
+
+    useEffect(() => {
+        console.log(showMenu);
+    },[showMenu])
+
     return(
         <React.Fragment>
             <div className="header">
@@ -55,15 +61,54 @@ const Header = (props) => {
                         }
                     </div>
                 }
-                
-                {(screenWidth >= 800 || showMenu) &&
-                    <div className="header--navbar">
+
+                {(screenWidth >= 800) ?
+                    <motion.div
+                        className="header--navbar"
+                        initial="closed"
+                        animate="open"
+                        exit="closed"
+                        variants={header}
+                    >
                         <NavBar/>
-                    </div>
+                    </motion.div>
+                    :
+                    <AnimatePresence>
+                        {(showMenu) &&
+                            <motion.div
+                                className="header--navbar"
+                                initial="closed"
+                                animate="open"
+                                exit="closed"
+                                variants={header}
+                            >
+                                <NavBar/>
+                            </motion.div>
+                        }
+                    </AnimatePresence>
                 }
             </div>
         </React.Fragment>
     )
 }
-
+const header = {
+    open: {
+        height: "auto",
+        transition: {
+            type: "spring",
+            stiffness: 400,
+            damping: 40,
+            when: "beforeChildren",
+            staggerChildren: 0.1,
+        }
+    },
+    closed: {
+        height: 0,
+        transition: {
+            type: "spring",
+            stiffness: 400,
+            damping: 40,
+        }
+    }
+};
 export default Header;

@@ -16,6 +16,11 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 
+//models
+import departamento01 from '../../assets/models/departamento-01.glb'; 
+import dep01 from '../../assets/models/dept-01.glb';
+import edificio01 from '../../assets/models/edificio-01.glb';
+import monticulo from '../../assets/models/monticulo.glb';
 
 function SampleNextArrow(props) {
     const { onClick } = props;
@@ -43,6 +48,28 @@ function SamplePrevArrow(props) {
 
 
 const Carrousel = () => {
+    const carrouselList = [
+        {
+            "title": "Departamento 01 Demo",
+            "description": "Hecho por Dixel",
+            "model": departamento01
+        },
+        {
+            "title": "Departamento 02 Demo",
+            "description": "Hecho por Dixel",
+            "model": dep01
+        },
+        {
+            "title": "Edificio con AR Demo",
+            "description": "Hecho por Dixel",
+            "model": edificio01
+        },
+        {
+            "title": "Fuente Neptuno (Monticulo)",
+            "description": "Hecho por Dixel",
+            "model": monticulo
+        },
+    ];
     const settings = {
         centerMode: true,
         infinite: true,
@@ -55,14 +82,14 @@ const Carrousel = () => {
         className: "slides",
         responsive: [
             {
-                breakpoint: 1060,
+                breakpoint: 1090,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,
                 }
             },
             {
-                breakpoint: 700,
+                breakpoint: 760,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
@@ -78,10 +105,9 @@ const Carrousel = () => {
                     title="DEMO DE REALIDAD AUMENTADA"
                 />
                 <Slider {...settings}>
-                    <CarrouselItem/>
-                    <CarrouselItem/>
-                    <CarrouselItem/>
-                    <CarrouselItem/>
+                    {carrouselList.map((item, index) => (
+                        <CarrouselItem key={index} data={item}/>
+                    ),[])}
                 </Slider>
             </div>
         </React.Fragment>

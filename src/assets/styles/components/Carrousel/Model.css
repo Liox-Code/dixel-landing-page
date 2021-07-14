@@ -1,0 +1,46 @@
+model-viewer {
+    background-color: #ECECEC;
+}
+
+model-viewer#interaction {
+    --poster-color: transparent;
+}
+
+model-viewer#reveal {
+    --poster-color: transparent;
+}
+
+  /* HOTSPOTS */
+.hotspot {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: blue;
+}
+.hotspot.selected {
+    background-color: red;
+}
+
+button[slot="hotspot-hand"]{
+    --min-hotspot-opacity: 0;
+    background-color: red;
+}
+
+button[slot="hotspot-foot"]:not([data-visible]) {
+    background-color: transparent;
+    border: 3px solid blue;
+}
+
+#annotation{
+    background-color: #888888;
+    position: absolute;
+    transform: translate(10px, 10px);
+    border-radius: 10px;
+    padding: 10px;
+}
+/* This keeps child nodes hidden while the element loads */
+  :not(:defined) > * {
+    display: none;
+}
+/* FIN HOTSPOT */

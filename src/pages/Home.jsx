@@ -54,7 +54,7 @@ const Home = () => {
                 <div className="quotes--background background">
                     <Quotes/>
                 </div>
-                <div className="services--background background">
+                <div className="services--background background" id="services">
                     <Services/>
                 </div>
                 <div className="carrousel--background background">
@@ -66,10 +66,10 @@ const Home = () => {
                 <motion.div layout className="application-areas--background background">
                     <ApplicationAreas/>
                 </motion.div>
-                <div className="contact-us--background background">
+                <div className="contact-us--background background" id="Contact">
                     <ContactUs/>
                 </div>
-                <div className="contact-info--background background">
+                <div className="contact-info--background background" id="AboutUs">
                     <Contact/>
                 </div>
                 <div className="footer-info--background background">

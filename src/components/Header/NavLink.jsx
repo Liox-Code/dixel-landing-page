@@ -1,13 +1,27 @@
 import React from 'react';
+import { motion } from "framer-motion";
 
 //styles
 import '../../assets/styles/components/Header/NavLink.css';
 
+const header = {
+    open: {
+        opacity: 1
+    },
+    closed: {
+        opacity: 0
+    }
+};
+
 const NavLink = (props) => {
-    const {text} = props;
+    const { text, link } = props;
     return(
         <React.Fragment>
-            <a href="#top" className="nav-link">
+            <motion.a
+                href={`#${link}`}
+                className="nav-link"
+                variants={header}
+            >
                 <div className="link">
                     <span>{text}</span>
                     <div className="link-underline">
@@ -17,7 +31,7 @@ const NavLink = (props) => {
                         <div className="nav-link--circle nav-link--circle-right"></div>
                     </div>
                 </div>
-            </a>
+            </motion.a>
         </React.Fragment>
     )
 }

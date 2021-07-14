@@ -25,11 +25,11 @@ const ServicesCircuit = (props) => {
                 <div className="services-circuit--horizontal-1 services-circuit--horizontal"></div>
                 <div className="services-circuit--vertical-2 services-circuit--vertical"></div>
                 <div className="services-circuit--horizontal-2 services-circuit--horizontal" style={{top: serviceCircuitState.servicePosition[0]}}></div>
-                <div className="services-circuit--circle-1 services-circuit--circle" style={{top: serviceCircuitState.servicePosition[0] - 4}}></div>
+                <div className="services-circuit--circle-1 services-circuit--circle" style={{top: serviceCircuitState.servicePosition[0] - 3}}></div>
                 <div className="services-circuit--horizontal-3 services-circuit--horizontal" style={{top: serviceCircuitState.servicePosition[1]}}></div>
-                <div className="services-circuit--circle-2 services-circuit--circle" style={{top: serviceCircuitState.servicePosition[1] - 4}}></div>
+                <div className="services-circuit--circle-2 services-circuit--circle" style={{top: serviceCircuitState.servicePosition[1] - 3}}></div>
                 <div className="services-circuit--horizontal-4 services-circuit--horizontal" style={{top: serviceCircuitState.servicePosition[2]}}></div>
-                <div className="services-circuit--circle-3 services-circuit--circle" style={{top: serviceCircuitState.servicePosition[2] - 4}}></div>
+                <div className="services-circuit--circle-3 services-circuit--circle" style={{top: serviceCircuitState.servicePosition[2] - 3}}></div>
             </div>
         </React.Fragment>
     )

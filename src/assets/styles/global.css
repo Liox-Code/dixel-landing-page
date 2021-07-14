@@ -10,7 +10,3 @@ html{
     font-size: 62.5%;
     scroll-behavior: smooth;
 }
-
-body {
-    background: linear-gradient(to bottom, var(--complementary-7-color), var(--complementary-8-color));
-}

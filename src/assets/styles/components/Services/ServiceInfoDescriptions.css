@@ -18,6 +18,11 @@
     text-align: justify;
 }
 
+.service-description-section > p > b {
+    font-family: var(--Montserrat-Bold-font);
+    font-size: 1.4rem;
+}
+
 @media (min-width: 800px) {
     .service-description-section {
         display: grid;

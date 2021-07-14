@@ -3,16 +3,15 @@ import React from 'react';
 //styles
 import '../../assets/styles/components/ApplicationAreas/ApplicationArea.css';
 
-//icons
-import appArea from '../../assets/static/Application-Area.svg';
-
-const ApplicationArea = () => {
+const ApplicationArea = (props) => {
+    const { image, title, description } = props.data;
+    console.log(image);
     return(
         <React.Fragment>
             <div className="application-area">
-                <img src={appArea} alt=""/>
-                <h3>Educación</h3>
-                <p>contribuye a mejorar la experiencia de docentes y alumnos, incrementando así la interactividad y calidad de la enseñanza en los diferentes niveles educativos.</p>
+                <img src={image} alt=""/>
+                <h3>{title}</h3>
+                <p>{description}</p>
             </div>
         </React.Fragment>
     )
