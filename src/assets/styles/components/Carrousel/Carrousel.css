@@ -14,6 +14,7 @@
     align-items: center;
     padding: 52px 0 60px;
     width: 100%;
+    cursor: pointer;
 }
 
 .carrousel-left-arrow {

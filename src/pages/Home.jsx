@@ -60,7 +60,7 @@ const Home = () => {
                 <div className="carrousel--background background">
                     <Carrousel/>
                 </div>
-                <motion.div layout className="price-packs--background background">
+                <motion.div layout className="price-packs--background background" id="PricePacks">
                     <PricePacks/>
                 </motion.div>
                 <motion.div layout className="application-areas--background background">

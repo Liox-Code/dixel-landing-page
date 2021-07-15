@@ -14,6 +14,8 @@
     --complementary-10-color: #6930C3;
     --white: #F1FAEE;
     --black: #161616;
+    --error-color: #c2272d;
+    --correct-color: #3ab549;
     /* font */
     --Gillubcd-font: 'Gillubcd';
     --Montserrat-Black-font: 'Montserrat-Black';

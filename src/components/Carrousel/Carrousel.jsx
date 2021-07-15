@@ -52,22 +52,26 @@ const Carrousel = () => {
         {
             "title": "Departamento 01 Demo",
             "description": "Hecho por Dixel",
-            "model": departamento01
+            "model": departamento01,
         },
         {
             "title": "Departamento 02 Demo",
             "description": "Hecho por Dixel",
-            "model": dep01
+            "model": dep01,
         },
         {
             "title": "Edificio con AR Demo",
             "description": "Hecho por Dixel",
-            "model": edificio01
+            "model": edificio01,
+            "modelButton": 
+            <button className="hotspot selected" slot="hotspot-hand" data-position="0.10264444293048927m 0.20842031896801913m 0.2226409711973905m" data-normal="0m -0.0000017335914033395967m 0.9999999999984973m">
+                <div id="annotation">Departamento Demo</div>
+            </button>,
         },
         {
             "title": "Fuente Neptuno (Monticulo)",
             "description": "Hecho por Dixel",
-            "model": monticulo
+            "model": monticulo,
         },
     ];
     const settings = {

@@ -1,17 +1,114 @@
-import React from 'react';
+import React, {useState} from 'react';
+import emailjs from 'emailjs-com';
 
 //styles
 import '../../assets/styles/components/Email/Email.css';
 import '../../assets/styles/components/Buttons/Small-Purple-Button.css';
+import '../../assets/styles/icons/Loader.css';
+import '../../assets/styles/icons/CheckIcon.css';
+import '../../assets/styles/icons/WrongIcon.css';
 
 //icons
-// import { AiFillCheckCircle, AiFillCloseCircle } from "react-icons/ai";
+import { AiFillCheckCircle, AiFillCloseCircle } from "react-icons/ai";
 
 const Email = () => {
+    const [emailMessage, setEmailMessage] = useState({
+        name: '',
+        email: '',
+        message: '',
+        nameError: '',
+        emailError: '',
+        messageError: '',
+        exitoEmail: false,
+        cargandoEmail: false,
+        errorEmail: false,
+    });
+
+    const enviarEmail = (e) => {
+        e.preventDefault();
+
+        setEmailMessage({
+            ...emailMessage,
+            name: emailMessage.name.trim(),
+            email: emailMessage.email.trim(),
+            message: emailMessage.message.trim(),
+            cargandoEmail: true,
+        });
+        
+        if(emailMessage.name && emailMessage.email && emailMessage.message){
+            sendEmail(e);
+        }
+    }
+
+    const sendEmail = async (e) => {
+        emailjs.sendForm('service_email_dixel', 'template_mmekdah', e.target, 'user_9sNblMuv5tKXTJQFdZ9cZ')
+        .then((result) => {
+            setEmailMessage({
+                ...emailMessage,
+                exitoEmail: true,
+                cargandoEmail: false,
+            });
+            resetEmailForm(true);
+        }, (error) => {
+            setEmailMessage({
+                ...emailMessage,
+                cargandoEmail: false,
+                errorEmail: true,
+            });
+            resetEmailForm(false);
+        });
+        e.target.reset();
+    }
+
+    const resetEmailForm = (reset) => {
+        if(reset){
+            setTimeout(
+                () => {
+                    setEmailMessage({
+                        ...emailMessage,
+                        name: '',
+                        email: '',
+                        message: '',
+                        nameError: '',
+                        emailError: '',
+                        messageError: '',
+                        exitoEmail: false,
+                        errorEmail: false,
+                    });
+                },
+                1000
+            );
+        } else {
+            setTimeout(
+                () => {
+                    setEmailMessage({
+                        ...emailMessage,
+                        exitoEmail: false,
+                        errorEmail: false,
+                    });
+                },
+                1000
+            );
+        }
+    }
+
+    const handleOnChange = e => {
+        let errorCampoVacio = '';
+        if(!e.target.value){
+            errorCampoVacio = 'Campo vacio';
+        }
+
+        setEmailMessage({
+            ...emailMessage,
+            [e.target.name]: e.target.value,
+            [e.target.name+'Error']: errorCampoVacio,
+        });
+    }
+
     return(
         <React.Fragment>
             <form
-                action=""
+                onSubmit={enviarEmail}
                 className="email"
             >
                 <div className="email-form--input-container">
@@ -20,10 +117,10 @@ const Email = () => {
                         placeholder="Nombre"
                         name="name"
                         required
-                        // onChange={updateField}
-                        // value={emailMessage.name}
+                        onChange={handleOnChange}
+                        value={emailMessage.name}
                     />
-                    {/* { emailMessage.nameError && <span className="error-form-field">{emailMessage.nameError}</span>} */}
+                    { emailMessage.nameError && <span className="error-form-field">{emailMessage.nameError}</span>}
                 </div>
                 <div className="email-form--input-container">
                     <input
@@ -31,10 +128,10 @@ const Email = () => {
                         placeholder="Email"
                         name="email"
                         required
-                        // onChange={updateField}
-                        // value={emailMessage.email}
+                        onChange={handleOnChange}
+                        value={emailMessage.email}
                     />
-                    {/* { emailMessage.emailError && <span className="error-form-field">{emailMessage.emailError}</span>} */}
+                    { emailMessage.emailError && <span className="error-form-field">{emailMessage.emailError}</span>}
                 </div>
                 <div className="email-form--input-container">
                     <textarea
@@ -42,31 +139,33 @@ const Email = () => {
                         rows="10"
                         name="message"
                         required
-                        // onChange={updateField}
-                        // value={emailMessage.message}
+                        onChange={handleOnChange}
+                        value={emailMessage.message}
                     ></textarea>
-                    {/* { emailMessage.messageError && <span className="error-form-field">{emailMessage.messageError}</span>} */}
+                    { emailMessage.messageError && <span className="error-form-field">{emailMessage.messageError}</span>}
                 </div>
-                <input
+                <button 
+                    className="email-submit-button small-purple-button"
+                    disabled={(!emailMessage.name || !emailMessage.email || !emailMessage.message || emailMessage.errorEmail || emailMessage.cargandoEmail)}
                     type="submit"
-                    className="small-purple-button"
-                    value="ENVIAR"
-                />
-                {/* { emailMessage.cargandoEmail &&
-                    <span className="center margin-top-4">
+                >
+                    { !emailMessage.cargandoEmail ? <span>ENVIAR</span> : <span>ENVIANDO</span> }
+                </button>
+                { emailMessage.cargandoEmail &&
+                    <span className="email-icon">
                         <div className="lds-ring"><div></div><div></div><div></div><div></div></div>
                     </span>
                 }
                 { emailMessage.exitoEmail &&
-                    <span className="circular-icon center margin-top-4">
+                    <span className="email-icon">
                         <AiFillCheckCircle className="check-icon"/> 
                     </span>
                 }
                 { emailMessage.errorEmail &&
-                    <span className="circular-icon center margin-top-4">
+                    <span className="email-icon">
                         <AiFillCloseCircle className="wrong-icon"/> 
                     </span>
-                } */}
+                }
             </form>
         </React.Fragment>
     )

@@ -21,6 +21,7 @@
     justify-self: start;
     padding: 4px 12px;
     font-size: 1.2rem;
+    cursor: pointer;
 }
 
 .service-info--next-btn {
@@ -28,6 +29,7 @@
     justify-self: end;
     padding: 4px 12px;
     font-size: 1.2rem;
+    cursor: pointer;
 }
 
 .service-info--title {

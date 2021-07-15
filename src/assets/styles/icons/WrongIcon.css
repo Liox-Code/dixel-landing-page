@@ -1,0 +1,7 @@
+.wrong-icon {
+    width: 40px;
+    height: 40px;
+    background-color: var(--error-color);
+    color: var(--white);
+    border-radius: 20px;
+}

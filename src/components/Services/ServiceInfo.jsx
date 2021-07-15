@@ -124,9 +124,9 @@ const ServiceInfo = (props) => {
                         ))}
                     </ul>
                 </div>
-                <button className="service-info--buy-button small-red-button">
+                <a href="#PricePacks" className="service-info--buy-button small-red-button">
                     {buyBtnText}
-                </button>
+                </a>
             </motion.div>
         </React.Fragment>
     )

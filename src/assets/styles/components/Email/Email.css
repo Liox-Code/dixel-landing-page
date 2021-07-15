@@ -11,21 +11,22 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+    margin-bottom: 8px;
 }
 
 .email-form--input-container > input {
-    margin-bottom: 8px;
     padding: 4px 16px;
     height: 28px;
     width: 100%;
     border: none;
     border-radius: 50px;
+    font-family: var(--Montserrat-Light-font);
+    font-size: 1.4rem;
     outline: none;
 }
 
 .email-form--input-container > input::placeholder {
     text-align: center;
-    font-size: 1.4rem;
 }
 
 .email-form--input-container > input:focus {
@@ -34,12 +35,12 @@
 
 .email-form--input-container > textarea {
     width: 100%;
-    margin-bottom: 28px;
     padding: 8px 16px;
     height: 116px;
     border-radius: 10px;
     border: none;
     outline: none;
+    font-family: var(--Montserrat-Light-font);
     font-size: 1.4rem;
     text-align: justify;
 }
@@ -48,13 +49,26 @@
     border: 2px solid var(--primary-color);
 }
 
-.submit {
-    position: relative;
-    align-self: end;
+.email-form--input-container .error-form-field{
+    width: 100%;
+    padding: 4px 16px;
+    background-color: var(--secundary-color);
+    font-family: var(--Montserrat-Bold-font);
+    font-size: 1.4rem;
+    color: var(--white);
+    border-radius: 8px;
+    /* clip-path: polygon(0px 8px, 20px 8px, 30px 0px, 40px 8px, 100% 8px, 100% 100%, 0px 100%); */
 }
 
-.submit:disabled {
+.email-submit-button {
+    margin-top: 20px;
+}
+
+.email-submit-button:disabled {
     pointer-events: none;
-    background-color: var(--primary-opacity-7);
-    color: var(--mustard-opacity-7);
+    opacity: 0.7;
+}
+
+.email-icon {
+    margin-top: 8px;
 }

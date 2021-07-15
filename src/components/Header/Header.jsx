@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import { motion, AnimatePresence } from "framer-motion";
 
 //components
@@ -20,10 +20,6 @@ const Header = (props) => {
     const toggle = () => {
         setShowMenu(!showMenu);
     }
-
-    useEffect(() => {
-        console.log(showMenu);
-    },[showMenu])
 
     return(
         <React.Fragment>

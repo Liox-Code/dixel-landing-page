@@ -5,7 +5,6 @@ import '../../assets/styles/components/ApplicationAreas/ApplicationArea.css';
 
 const ApplicationArea = (props) => {
     const { image, title, description } = props.data;
-    console.log(image);
     return(
         <React.Fragment>
             <div className="application-area">

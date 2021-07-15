@@ -10,6 +10,7 @@
     border-radius: 100px;
     box-shadow: 5px -5px var(--complementary-10-color);
     color: var(--white);
+    cursor: pointer;
     font-family: var(--Montserrat-Bold-font);
     font-size: 1.6rem;
     line-height: 2rem;
