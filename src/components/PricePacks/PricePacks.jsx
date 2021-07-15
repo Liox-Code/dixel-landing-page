@@ -23,7 +23,7 @@ const PricePacks = (props) => {
                 "Sección AR",
                 "Aplicación Web",
             ],
-            "price": "580 Bs.",
+            "price": "850 Bs.",
             "style": "basic-pack"
         },
         {
@@ -40,7 +40,7 @@ const PricePacks = (props) => {
                 "Formulario de contacto",
                 "Mapa de ubicación",
             ],
-            "price": "400 Bs.",
+            "price": "500 Bs.",
             "style": "normal-pack"
         },
         {
@@ -58,7 +58,7 @@ const PricePacks = (props) => {
                 "Mapa de ubicación",
                 "Catálogo/Galería de productos o servicios",
             ],
-            "price": "750 Bs.",
+            "price": "800 Bs.",
             "style": "normal-pack"
         },
         {
@@ -77,7 +77,7 @@ const PricePacks = (props) => {
                 "Sección de productos",
                 "Carrito de compras",
             ],
-            "price": "1200 Bs.",
+            "price": "1400 Bs.",
             "style": "normal-pack"
         },
         {
@@ -94,7 +94,7 @@ const PricePacks = (props) => {
                 "Formulario de contacto",
                 "Mapa de ubicación",
             ],
-            "price": "1250 Bs.",
+            "price": "desde 1250 Bs.",
             "style": "plus-pack"
         },
         {
@@ -112,7 +112,7 @@ const PricePacks = (props) => {
                 "Mapa de ubicación",
                 "Catálogo/Galería de productos o servicios",
             ],
-            "price": "2200 Bs.",
+            "price": "desde 2200 Bs.",
             "style": "plus-pack"
         },
         {
@@ -131,7 +131,7 @@ const PricePacks = (props) => {
                 "Sección de productos",
                 "Carrito de compras",
             ],
-            "price": "3450 Bs.",
+            "price": "desde 3450 Bs.",
             "style": "plus-pack"
         },
     ];

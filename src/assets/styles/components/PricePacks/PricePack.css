@@ -26,6 +26,7 @@
     flex-direction: column;
     align-items: center;
     padding-top: 20px;
+    cursor: pointer;
 }
 
 .price-pack--bottom-border {
@@ -124,6 +125,7 @@
 
     .price-pack--header {
         padding: 28px 0;
+        cursor: auto;
     }
 
     .price-pack--content {
