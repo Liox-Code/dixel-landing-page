@@ -10,3 +10,25 @@ html{
     font-size: 62.5%;
     scroll-behavior: smooth;
 }
+
+::-webkit-scrollbar-track
+{
+    background: linear-gradient(to bottom, var(--secundary-color), var(--primary-color));
+}
+
+::-webkit-scrollbar
+{
+	width: 8px;
+	background-color: var(--white);
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color: var(--complementary-1-color);
+    border-radius: 8px;
+}
+
+* {
+    scrollbar-color: var(--complementary-1-color) var(--primary-color);
+    scrollbar-width: thin;
+}
