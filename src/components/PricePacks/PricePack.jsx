@@ -40,7 +40,7 @@ const PricePack = (props) => {
     return(
         <React.Fragment>
                 <motion.div layout className={`price-pack--container ${style}`}>
-                    <motion.div layout className={`price-pack--header ${open && "price-pack--bottom-border"}`} onClick={(screenWidth < 800) && handleToggleOpen}>
+                    <motion.div layout className={`price-pack--header ${open && "price-pack--bottom-border"}`} onClick={(screenWidth < 800) ? handleToggleOpen : undefined}>
                         {title}
                         {(screenWidth < 800) && (
                             open ?
