@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import '../../assets/styles/components/PricePacks/PricePack.css';
 
 //icons
-import { GoChevronUp, GoChevronDown, GoPrimitiveDot } from "react-icons/go";
+import { GoChevronUp, GoChevronDown, GoDot } from "react-icons/go";
 
 //animation
 import { transitionOpen } from '../../animations/PricePack';
@@ -64,7 +64,7 @@ const PricePack = (props) => {
                                     <ul className="price-pack--list">
                                         {
                                             packBenefits.map( (packItem, index) => (
-                                                <li key={index}><GoPrimitiveDot className="price-pack--dot"/>{packItem}</li>
+                                                <li key={index}><GoDot  className="price-pack--dot"/>{packItem}</li>
                                             ))
                                         }
                                     </ul>

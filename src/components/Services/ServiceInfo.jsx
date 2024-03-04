@@ -14,7 +14,7 @@ import '../../assets/styles/icons/Arrow-Icon.css';
 
 //icons
 import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri";
-import { GoPrimitiveDot } from "react-icons/go";
+import { GoDot } from "react-icons/go";
 
 const ServiceInfo = (props) => {
     const { image } = props.service[0];
@@ -118,7 +118,7 @@ const ServiceInfo = (props) => {
                     <ul className="list-benefits" ref={refListBenefits}>
                         {benefits.map( (benefit, id) => (
                             <li key={id}>
-                                <GoPrimitiveDot className="list-benefits--dot"/>
+                                <GoDot className="list-benefits--dot"/>
                                 {benefit}
                             </li>
                         ))}
